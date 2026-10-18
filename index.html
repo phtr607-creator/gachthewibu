@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>GachTheWibu — Dịch vụ thẻ cào</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#"><span class="logo">W</span><span>GachThe<span class="blue">Wibu</span><small>THẺ CÀO • NHANH • MINH BẠCH</small></span></a><button id="accountBtn" class="btn outline">Đăng nhập</button></header>
+<main>
+<section class="hero"><div><span class="pill">✦ NỀN TẢNG THẺ CÀO</span><h1>Gạch thẻ <span class="blue">đơn giản.</span><br>Quản lý minh bạch.</h1><p>Giao diện dễ dùng, theo dõi trạng thái và lịch sử giao dịch tại một nơi.</p><div class="trust"><span>✓ Giao diện tối ưu di động</span><span>✓ Lịch sử theo tài khoản</span></div></div><div class="hero-card"><div class="card-icon">▤</div><h3>Gạch thẻ cào</h3><p>Chọn nhà mạng và mệnh giá để chuẩn bị giao dịch.</p><div class="fake-row"><span>Nhà mạng</span><b>Chọn bên dưới ↓</b></div><div class="fake-row"><span>Trạng thái</span><b class="amber">Chờ kết nối API</b></div></div></section>
+<section class="notice"><b>Thông báo:</b> Website đang chờ kết nối nhà cung cấp API. Chưa thể xử lý thẻ thật hoặc chi trả tiền. Không nhập mã thẻ thật cho đến khi quản trị viên thông báo đã tích hợp và kiểm thử xong.</section>
+<section class="grid">
+<div class="panel"><div class="section-title"><div><span class="eyebrow">GIAO DỊCH</span><h2>Gạch thẻ cào</h2></div><span class="step">01 / 03</span></div>
+<form id="cardForm">
+<label>Loại thẻ</label><select id="network" required><option value="Viettel">Viettel</option><option value="MobiFone">MobiFone</option><option value="VinaPhone">VinaPhone</option><option value="Vietnamobile">Vietnamobile</option><option value="Garena">Garena</option><option value="Zing">Zing</option><option value="Vcoin">Vcoin</option></select>
+<label>Mệnh giá</label><select id="denomination" required><option value="10000">10.000đ</option><option value="20000">20.000đ</option><option value="30000">30.000đ</option><option value="50000">50.000đ</option><option value="100000">100.000đ</option><option value="200000">200.000đ</option><option value="300000">300.000đ</option><option value="500000">500.000đ</option><option value="1000000">1.000.000đ</option></select>
+<label>Số seri</label><input id="serial" autocomplete="off" placeholder="Chỉ nhập khi API đã được kích hoạt" required>
+<label>Mã thẻ</label><input id="pin" type="password" autocomplete="off" placeholder="Không nhập thẻ thật khi chưa kích hoạt" required>
+<div class="calc"><span>Mệnh giá thẻ</span><strong id="amount">10.000đ</strong><small>Tỷ lệ chiết khấu sẽ được hiển thị sau khi cấu hình nhà cung cấp.</small></div>
+<button class="btn primary full" type="submit">Gửi giao dịch</button><p id="formMessage" class="message" role="status"></p>
+</form></div>
+<div class="panel side"><span class="eyebrow">TÀI KHOẢN</span><h2>Không gian của bạn</h2><p>Đăng nhập để xem tài khoản và lịch sử giao dịch.</p><div class="account-box"><div class="round">♙</div><div><b id="userLabel">Khách truy cập</b><small id="userSub">Đăng nhập hoặc tạo tài khoản mới</small></div></div><div class="actions"><button class="btn primary" id="loginBtn">Đăng nhập</button><button class="btn outline" id="registerBtn">Tạo tài khoản</button><button class="btn outline hidden" id="historyBtn">Tải lịch sử</button><button class="btn outline hidden" id="logoutBtn">Đăng xuất</button></div><div id="history" class="history"></div><div class="safe"><b>🔒 An toàn tài khoản</b><p>Dùng mật khẩu riêng, không chia sẻ mã OTP hoặc thông tin đăng nhập.</p></div></div>
+</section>
+<section class="features"><div><span>01</span><h3>Trạng thái rõ ràng</h3><p>Hiển thị phản hồi từ hệ thống khi API được tích hợp.</p></div><div><span>02</span><h3>Lịch sử giao dịch</h3><p>Tra cứu các giao dịch gắn với tài khoản.</p></div><div><span>03</span><h3>Ưu tiên bảo mật</h3><p>Không giả báo thành công khi nhà cung cấp chưa xác nhận.</p></div></section>
+</main><footer>© <span id="year"></span> GachTheWibu · Website cần được cấu hình API và kiểm thử trước khi vận hành thật.</footer>
+<dialog id="authDialog"><form id="authForm" method="dialog"><button class="close" type="button" id="closeDialog">×</button><span class="eyebrow">TÀI KHOẢN GACHTHEWIBU</span><h2 id="dialogTitle">Đăng nhập</h2><label>Email</label><input type="email" id="email" required autocomplete="email" placeholder="ban@example.com"><label>Mật khẩu</label><input type="password" id="password" required minlength="10" autocomplete="current-password" placeholder="Ít nhất 10 ký tự"><p class="hint">Mật khẩu cần ít nhất 10 ký tự.</p><button class="btn primary full" id="authSubmit" type="submit">Đăng nhập</button><p id="authMessage" class="message"></p></form></dialog>
+<script src="/app.js"></script>
+</body></html>
